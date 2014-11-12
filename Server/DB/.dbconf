@@ -1,0 +1,47 @@
+need 4 tables:
+--------------
+
+client:
+	- id (int)
+	- client_guid (varchar(50))
+	- u_name (varchar(30))
+	- h_name (varchar(30))
+	- u_rights (varchar(20))
+
+packet_logs:
+	- id (int)
+	- fk_client (int)
+	- time
+
+process_logs:
+	- id (int)
+	- fk_client (int)
+	- path (varchar(255))
+	- wName (varchar(255))
+
+mouse_move_logs:
+	- id (int)
+	- fk_client (int)
+	- fk_process_id (int)
+	- time
+	- start_x (int)
+	- start_y (int)
+	- end_x (int)
+	- end_y (int)
+
+mouse_clicks_logs:
+	- id (int)
+	- fk_client (int)
+	- fk_process_id (int)
+	- time
+	- click_x (int)
+	- click_y (int)
+	- click_type (enum)
+
+kb_logs:
+	- id (int)
+	- fk_client (int)
+	- fk_process_id (int)
+	- kb_start timestamp
+	- kb_end timestamp
+	- kb_entry text

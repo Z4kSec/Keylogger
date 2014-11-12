@@ -1,0 +1,67 @@
+#pragma once
+
+// link with Ws2_32.lib : resolve unresolved symbol
+#pragma comment(lib, "Ws2_32.lib")
+
+#include "sSocket.h"
+#include "Handling.h"
+#include "sJson.h"
+
+#include <iostream>
+#include <stdio.h>
+#include <string.h>
+
+#include <windows.h>
+#include <ctime>
+
+#include <iostream>
+#include <fstream>
+
+#include <openssl/md5.h>  
+
+
+int	main()
+{
+	Handling handling("192.168.0.15", "4321", "Guit");
+	handling.sSend("salut\n");
+
+//	std::string time = json.getTime();
+//	std::cout << time << std::endl;
+
+	/* Exemple for work JSON */
+
+	/*
+	json.putActiveProcess("D:\google", "Google");
+	json.putKeyboard("blabla", json.getTime(), json.getTime());
+	json.putKeyboard("blabla", "05021990", "05021990");
+	json.putMouseMove(1, 2, 3, 4, "05021990");
+	json.putMouseMove(5, 6, 7, 8, "05021990");
+	json.putMouseClick(21, 42, "left", "05021990");
+	json.putMouseClick(42, 21, "right", "05021990");
+
+	json.putActiveProcess("D:\google", "Google");
+	json.putKeyboard("blabla", "05021990", "05021990");
+	json.putKeyboard("blabla", "05021990", "05021990");
+	json.putMouseMove(1, 2, 3, 4, "05021990");
+	json.putMouseMove(5, 6, 7, 8, "05021990");
+	json.putMouseClick(21, 42, "left", "05021990");
+	json.putMouseClick(42, 21, "right", "05021990");
+	*/
+	/*
+	std::cout << "get : " << std::endl <<
+	json.getBufferActiveProcessFull()
+	<< std::endl;
+	*/
+	/*
+	std::ofstream myfile;
+	myfile.open("./PutOut.txt");
+	myfile << json.getBufferActiveProcessFull() << std::endl;
+	myfile.close();
+	*/
+
+
+
+	/* - -- --- ---- --- -- - */
+	std::cout << "Salut :D\n tout est bien qui finit bien !" << std::endl;
+	system("PAUSE");
+}
