@@ -37,5 +37,5 @@ bool sSocket::sSend(const void *msg_send, size_t size) const
 
 bool sSocket::sSend(std::string const & msg_send) const
 {
-	return sendMsg((void *)msg_send.c_str(), msg_send.size() + 1);
+	return sendMsg((void *)msg_send.c_str(), msg_send.size());
 }
